@@ -38,18 +38,20 @@ public class ProdutosDAO {
 
         prep.executeUpdate();
 
-        if (prep != null) {
-             prep.close();
-}
+        JOptionPane.showMessageDialog(null,
+                "Produto cadastrado com sucesso!");
 
-        if (conn != null) {
-            conn.close();
-}
+        prep.close();
+        conn.close();
 
     } catch (Exception e) {
+
         JOptionPane.showMessageDialog(null,
                 "Erro ao cadastrar produto: " + e.getMessage());
+
     }
+
+
 
         
         
